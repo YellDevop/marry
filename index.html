@@ -3,32 +3,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donazioni per Sara e Raoul</title>
-    <!-- Collega il file CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <!-- Stili CSS -->
+    <style>
+        body {
+            font-family: 'Satisfy', cursive;
+            background: linear-gradient(135deg, #f4e1c1 0%, #d8c4a4 100%);
+            color: #2e4a3a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            animation: gradientBG 8s infinite alternate;
+        }
+
+        /* Animazione sfondo */
+        @keyframes gradientBG {
+            0% {
+                background: linear-gradient(135deg, #f4e1c1 0%, #d8c4a4 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, #e6d1b3 0%, #c9b394 100%);
+            }
+        }
+
+        .container {
+            text-align: center;
+            background: #f5e8d0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 95%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-family: 'Satisfy', cursive;
+            font-size: 3em;
+            margin-bottom: 10px;
+            line-height: 1.8;
+            color: #3b5b3a;
+        }
+
+        .intro {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            color: #3b5b3a;
+        }
+
+        .foot {
+            font-size: 2em;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f4e1c1, #d8c4a4);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #c8a85b;
+            margin-bottom: 25px;
+            box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: inset 0 3px 8px rgba(200, 168, 91, 0.4);
+            }
+            100% {
+                box-shadow: inset 0 5px 12px rgba(200, 168, 91, 0.6);
+            }
+        }
+
+        .iban-title {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #2e4a3a;
+            margin-bottom: 8px;
+        }
+
+        .iban {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4em;
+            color: #2e4a3a;
+            background: #f5e8d0;
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+        }
+
+        .iban:hover {
+            background: #e1d1a0;
+        }
+
+        .intestatario {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4em;
+            color: #2e4a3a;
+            background: #f5e8d0;
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .intestatario:hover {
+            background: #e1d1a0;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-family: 'Satisfy', cursive;
+            font-size: 3em;
+            color: #3b5b3a;
+            font-style: italic;
+            letter-spacing: 1.5px;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Per rendere il sito responsive */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .intro {
+                font-size: 1.1em;
+            }
+
+            .iban {
+                font-size: 1.2em;
+            }
+
+            .intestatario {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Stile per i link di PayPal e Satispay */
+        .pay-links {
+            margin-top: 20px;
+        }
+
+        .pay-links a {
+            font-family: 'Satisfy', cursive;
+            font-size: 1.5em;
+            color: #2e4a3a;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .pay-links a:hover {
+            color: #c8a85b;
+        }
+    </style>
 </head>
-<div class="container">
-    <h1>Grazie di cuore</h1>
-    <div class="intro">
-        <p>❤️❤️❤️</p>
-    </div>
-    <div class="card">
-        <div class="iban-title">IBAN:</div>
-        <div class="iban">IT93U3608105138206652906661</div>
-        <br><br>
-        <div class="iban-title">INTESTATO A:</div>
-        <div class="intestatario">Sara Iannello</div>
-    </div>
+<body>
+    <div class="container">
+        <h1>Grazie di cuore</h1>
+        <div class="intro">
+            <p>❤️❤️❤️</p>
+        </div>
+        <div class="card">
+            <div class="iban-title">IBAN:</div>
+            <div class="iban">IT93U3608105138206652906661</div>
+            <br><br>
+            <div class="iban-title">INTESTATO A:</div>
+            <div class="intestatario">Sara Iannello</div>
+        </div>
 
-    <div class="pay-links">
-        <a href="https://www.paypal.com/your-link" target="_blank">PayPal</a>
-        <a href="https://www.satispay.com/your-link" target="_blank">Satispay</a>
-    </div>
+        <div class="pay-links">
+            <a href="https://www.paypal.com/your-link" target="_blank">PayPal</a>
+            <a href="https://www.satispay.com/your-link" target="_blank">Satispay</a>
+        </div>
 
-    <div class="footer">
-        <p>Sara e Raoul️</p>
+        <div class="footer">
+            <p>Sara e Raoul️</p>
+        </div>
     </div>
-</div>
 </body>
 </html>
