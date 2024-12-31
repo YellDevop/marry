@@ -101,11 +101,6 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .pay-links a:hover {
-            transform: scale(1.1);
-            background: #c8a85b;
-        }
-
         .footer {
             margin-top: 25px;
             font-size: 3em;
@@ -115,15 +110,21 @@
         }
 
         .payment-logo {
-            width: 80px; /* Dimensione del logo */
-            margin: 0 15px; /* Spaziatura tra i loghi */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 10px; /* Opzionale: per arrotondare gli angoli */
+            width: 100px; /* Larghezza personalizzata */
+            height: auto; /* Mantiene le proporzioni */
+            margin: 10px; /* Spazio attorno ai loghi */
+            transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
         }
-        
+    
         .payment-logo:hover {
-            transform: scale(1.1); /* Ingrandimento al passaggio del mouse */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.2); /* Ingrandisce leggermente al passaggio del mouse */
+        }
+    
+        .pay-links {
+            display: flex; /* Disposizione orizzontale */
+            justify-content: center; /* Centra i loghi nella card */
+            gap: 20px; /* Spazio tra i loghi */
+            margin-top: 20px;
         }
 
 
