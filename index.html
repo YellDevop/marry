@@ -114,6 +114,19 @@
             letter-spacing: 1.5px;
         }
 
+        .payment-logo {
+            width: 80px; /* Dimensione del logo */
+            margin: 0 15px; /* Spaziatura tra i loghi */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px; /* Opzionale: per arrotondare gli angoli */
+        }
+        
+        .payment-logo:hover {
+            transform: scale(1.1); /* Ingrandimento al passaggio del mouse */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+
         @media (max-width: 600px) {
             h1 { font-size: 2.5em; }
             .intro { font-size: 1.1em; }
@@ -136,9 +149,14 @@
             <div class="intestatario" onclick="copyToClipboard('Sara Iannello')">Sara Iannello</div>
         </div>
         <div class="pay-links">
-            <a href="https://www.paypal.com/your-link" target="_blank">PayPal</a>
-            <a href="https://www.satispay.com/your-link" target="_blank">Satispay</a>
+            <a href="https://www.paypal.com/your-link" target="_blank">
+            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" class="payment-logo">
+            </a>
+            <a href="https://www.satispay.com/your-link" target="_blank">
+            <img src="https://www.satispay.com/favicon.ico" alt="Satispay" class="payment-logo">
+            </a>
         </div>
+
         <div class="footer">
             Sara e Raoul
         </div>
