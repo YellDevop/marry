@@ -1,5 +1,5 @@
 // Data target del countdown (ad esempio, 1 gennaio 2025)
-const targetDate = new Date("January 1, 2025 00:00:00").getTime();
+const targetDate = new Date("May 17, 2025 17:00:00").getTime();
 
 // Funzione per aggiornare il countdown
 function updateCountdown() {
