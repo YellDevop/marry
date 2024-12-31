@@ -1,4 +1,4 @@
-// Data target del countdown (ad esempio, 1 gennaio 2025)
+// Data target del countdown (UTC è per il Fuso orario universale)
 const targetDate = new Date(Date.UTC(2025, 4, 17, 17, 0, 0)).getTime();
 
 // Funzione per aggiornare il countdown
